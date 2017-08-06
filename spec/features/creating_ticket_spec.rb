@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.feature "users can create tickets" do 
+RSpec.feature "users can create tickets", js:true do 
   scenario "with valid attributes" do 
   	visit "/"
 
