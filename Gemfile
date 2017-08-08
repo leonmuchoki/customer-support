@@ -38,6 +38,8 @@ group :development, :test do
   gem 'jasmine'
   #factory girl
   gem 'factory_girl_rails'
+  #chrome
+  gem 'chromedriver-helper'
 end
 
 group :development do

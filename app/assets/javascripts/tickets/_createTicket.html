@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="TicketCtrl">
+  	  <h4>Fill in details and submit ticket</h4>
+  	  <form>
+  	  	<div class="input-group">
+  	  	  <label for="ticket_subject">Subject</label>
+  	  	  <input type="text" ng-model="ticket.subject" id="ticket_subject">
+  	  	</div>
+  	  	<div class="input-group">
+  	  	  <label for="ticket_description">Description</label>
+  	  	  <input type="text" ng-model="ticket.description" id="ticket_description">
+  	  	</div>
+  	  	<button class="btn btn-primary">Submit</button>
+  	  </form>
+  	</div>
+  </div>
+</div>

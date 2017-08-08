@@ -5,9 +5,9 @@ RSpec.feature "users can create tickets", js:true do
   	visit "/"
 
   	click_link "Create Support Ticket"
-  	fill_in "Title", with: "ticket title"
+  	fill_in "Subject", with: "ticket title"
   	fill_in "Description", with: "issue"
-  	click_button "Create Ticket"
+  	click_button "Submit"
 
   	expect(page).to have_content "Ticket created successfully."
   end
