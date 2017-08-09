@@ -1,9 +1,10 @@
-angular.module('CustomerSupport', ['ui.router','templates'])
+angular.module('CustomerSupport', ['ui.router','templates','ui-notification'])
   .config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlRouterProvider) {
   	$stateProvider
   	  .state('home', {
   	  	url: '/',
-  	  	templateUrl: 'home/_home.html'
+  	  	templateUrl: 'home/_home.html',
+  	  	controller: 'HomeCtrl'
   	  })
   	  .state('create_ticket', {
   	  	url: '/create_ticket',

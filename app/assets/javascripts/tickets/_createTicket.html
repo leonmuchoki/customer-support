@@ -1,15 +1,18 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="TicketCtrl as tktCtrl">
   <div class="row">
-  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="TicketCtrl">
+  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
   	  <h4>Fill in details and submit ticket</h4>
-  	  <form>
-  	  	<div class="input-group">
-  	  	  <label for="ticket_subject">Subject</label>
-  	  	  <input type="text" ng-model="ticket.subject" id="ticket_subject">
+  	  <div class="errorCreateTicket" ng-show="tktCtrl.err !=''">
+  	  	<p>{{tktCtrl.err}}</p>
+  	  </div>
+  	  <form ng-submit="tktCtrl.postData(tktCtrl.subject,tktCtrl.description)">
+  	  	<div class="form-group">
+  	  	  <label for="ticketsubject">Subject</label>
+  	  	  <input type="text" ng-model="tktCtrl.subject" id="ticketsubject" class="form-control">
   	  	</div>
-  	  	<div class="input-group">
-  	  	  <label for="ticket_description">Description</label>
-  	  	  <input type="text" ng-model="ticket.description" id="ticket_description">
+  	  	<div class="form-group">
+  	  	  <label for="ticketdescription">Description</label>
+  	  	  <input type="text" ng-model="tktCtrl.description" id="ticketdescription" class="form-control">
   	  	</div>
   	  	<button class="btn btn-primary">Submit</button>
   	  </form>

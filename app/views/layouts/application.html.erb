@@ -10,7 +10,13 @@
 
   <body ng-app="CustomerSupport">
     <div class="container-fluid">
-      <ui-view></ui-view>
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><!--left sidebar--></div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <ui-view></ui-view>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><!--right sidebar--></div>
+      </div>
     </div>
   </body>
 </html>

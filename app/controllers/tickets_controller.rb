@@ -1,6 +1,7 @@
 class TicketsController < ApplicationController
   def index
-  	@tickets = Ticket.all 
+  	@tickets = Ticket.all
+  	 
   	respond_to do |format|
   	  format.json { render json: @tickets }
     end
