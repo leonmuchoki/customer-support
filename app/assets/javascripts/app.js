@@ -1,4 +1,4 @@
-angular.module('CustomerSupport', ['ui.router','templates','ui-notification'])
+angular.module('CustomerSupport', ['ui.router','templates','ui-notification','Devise'])
   .config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlRouterProvider) {
   	$stateProvider
   	  .state('home', {
@@ -10,7 +10,12 @@ angular.module('CustomerSupport', ['ui.router','templates','ui-notification'])
   	  	url: '/create_ticket',
   	  	templateUrl: 'tickets/_createTicket.html',
   	  	controller: 'TicketCtrl'
-  	  });
+  	  })
+      .state('register', {
+        url: '/register',
+        templateUrl: 'auth/_register.html',
+        controller: 'RegisterCtrl as regCtrl'
+      });
 
   	  $urlRouterProvider.otherwise('/');
   }]);

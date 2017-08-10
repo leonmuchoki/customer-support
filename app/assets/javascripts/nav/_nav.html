@@ -1,8 +1,9 @@
 <div class="container-fluid">
-  <div class="collapse navbar-collapse pull-right" ng-controller="NavCtrl">
+  <div class="collapse navbar-collapse pull-right" ng-controller="NavCtrl as navCtrl">
   	<ul class="nav navbar-nav">
-  		<li><a ui-sref="home">Home</li>
-  		<li><a ui-sref="ticket">Create Support Ticket</a></li>
+  		<li><a ui-sref="home">Home</a></li>
+  		<li ng-hide="signedIn()"><a ui-sref="register">Sign up</a></li>
+  		<li ng-show="signedIn()">{{navCtrl.user.email}}</li>
   	</ul>
   </div>
 </div>

@@ -5,9 +5,9 @@ angular.module('CustomerSupport')
     vm.ticketdata = {};
     this.getTickets = ViewTicketServ.getAllTickets().then(function(data) {
       //display tickets
-      Notification.success({message: "Tickets Loaded Successfully", delay: 4000});
-      console.log('all tickets->>>' + JSON.stringify(data));
-      
+      //Notification.success({message: "Tickets Loaded Successfully", delay: 4000});
+      //console.log('all tickets->>>' + JSON.stringify(data));
+
       vm.ticketdata = data;
       
     });

@@ -11,7 +11,7 @@ angular.module('CustomerSupport')
   		  //successfully posted
   		  var ticketstatus='Ticket created successfully.';
           $rootScope.$broadcast("ticketCreated",ticketstatus);
-          console.log('ticket created ->' + JSON.stringify(response));
+          //console.log('ticket created ->' + JSON.stringify(response));
           $state.go('home');
   		},function(error) {
   		  //not posted

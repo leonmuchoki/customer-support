@@ -4,7 +4,7 @@
   	  <h4>All Tickets</h4>
   	  <div ng-repeat="ticket in $ctrl.ticketdata" class="list-group">
   	    <a href="#descr" class="list-group-item" data-toggle="collapse" data-target="#descr">{{ticket.subject}}  {{ticket.created_at}}</a>
-  	    <div id="descr">{{ticket.description}}</div>
+  	    <div id="descr" class="collapse">{{ticket.description}}</div>
   	  </div>
   	</div>
   </div>
