@@ -2,8 +2,9 @@
   <div class="collapse navbar-collapse pull-right" ng-controller="NavCtrl as navCtrl">
   	<ul class="nav navbar-nav">
   		<li><a ui-sref="home">Home</a></li>
-  		<li ng-hide="signedIn()"><a ui-sref="register">Sign up</a></li>
-  		<li ng-show="signedIn()">{{navCtrl.user.email}}</li>
+  		<li ng-hide="navCtrl.signedIn()"><a ui-sref="register">Sign up</a></li>
+  		<li ng-hide="navCtrl.signedIn()"><a ui-sref="login">Log in</a></li>
+  		<li ng-show="navCtrl.signedIn()"><a href="#">{{navCtrl.user.email}}</a></li>
   	</ul>
   </div>
 </div>

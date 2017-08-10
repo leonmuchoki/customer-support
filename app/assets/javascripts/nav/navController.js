@@ -1,5 +1,5 @@
 angular.module('CustomerSupport')
-  .controller('NavCtrl', ['$scope','Auth', function($scope,Auth) {
+  .controller('NavCtrl', ['$scope','Auth','Notification', function($scope,Auth,Notification) {
   	var vm = this;
     
     vm.signedIn = Auth.isAuthenticated;
@@ -7,7 +7,11 @@ angular.module('CustomerSupport')
 
     $scope.$on('devise:new-registration', function(event, user) {
       vm.user = user;
-      vm.signedIn = Auth.isAuthenticated;
       console.log('devise:new-registration' + JSON.stringify(user.email));
+    });
+
+    $scope.$on('devise:login', function(event, user) {
+      vm.user = user;
+      Notification.success({message: 'You have logged in successfully.', delay: 3000});
     });
   }]);

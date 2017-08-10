@@ -15,6 +15,11 @@ angular.module('CustomerSupport', ['ui.router','templates','ui-notification','De
         url: '/register',
         templateUrl: 'auth/_register.html',
         controller: 'RegisterCtrl as regCtrl'
+      })
+      .state('login', {
+        url: '/login',
+        templateUrl: 'auth/_login.html',
+        controller: 'LoginCtrl as loginCtrl'
       });
 
   	  $urlRouterProvider.otherwise('/');

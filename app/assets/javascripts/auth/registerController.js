@@ -9,11 +9,11 @@ angular.module('CustomerSupport')
   	  };
   	  console.log('are we clickin? Hellyea!');
   	  Auth.register($scope.user).then(function(response) {
-  	  	$state.go('home');
         $rootScope.$broadcast('register:success',response);
-        console.log('register successful:>' + JSON.stringify(response));
+        $state.go('home');
+        //console.log('register successful:>' + JSON.stringify(response));
   	  }, function(error) {
-  	  	console.log('error->' + JSON.stringify(error));
+  	  	//console.log('error->' + JSON.stringify(error));
   	  	Notification.error({message: 'error during registration', delay: 2000});
   	  });
   	};

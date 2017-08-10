@@ -10,5 +10,9 @@ angular.module('CustomerSupport')
   	  Notification.success({message: 'You have signed up successfully.', delay: 20000});
   	  console.log('home on register->' + JSON.stringify(data));
   	});
+
+  	 $scope.$on('devise:login', function(event, user) {
+      Notification.success({message: 'You have logged in successfully.', delay: 20000});
+    });
   	
   }]);
