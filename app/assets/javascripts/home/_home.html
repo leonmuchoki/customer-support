@@ -2,12 +2,18 @@
   <div class="row">
   	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"></div>
   	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-  		<h3>Welcome to Customer Support</h3>
-  		<div class="ticketcreated">
-  		  <p>status: {{ homeCtrl.ticketcreated }}</p>
+  		<h3>Welcome to Customer Support</h3><br>
+  		<span>
+  		  <a href="#">All Tickets</a>
+  		  <a href="#">Closed Tickets</a>
+  		  <a href="#">Open Tickets</a>
+  		</span>
+  		<div class="tickets">
+  		  <view-tickets></view-tickets>
   		</div>
+  	</div>
+  	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
   		<a class="btn btn-primary" ui-sref="create_ticket">Create Support Ticket</a>
   	</div>
-  	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"></div>
   </div>
 </div>

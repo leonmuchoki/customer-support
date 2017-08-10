@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :ticket do
-    subject "MyString"
-    description "MyString"
+    subject "Issue"
+    description "Issue in detail"
   end
 end
